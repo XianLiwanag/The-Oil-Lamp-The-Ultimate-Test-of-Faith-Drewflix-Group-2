@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(theoillamp.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #CC5500;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #CC5500;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #CC5500;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;   
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+a:link {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active{ 
+    color: #fff;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+ 
+  body {
+    margin: 0;
+    height: auto;
+    width:  auto;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(theoillamp.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .drop {
+    position: absolute;
+    bottom: 100%;
+    animation: drop 1.2s linear infinite;
+  }
+
+  .stem {
+    width: 1px;
+    height: 50px;
+    margin-left: 7px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5));
+    animation: stem 1.2s linear infinite;
+  }
+
+  .splash {
+    position: absolute;
+    bottom: 40%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border-top: 1px dotted rgba(255,255,255,0.5);
+    animation: splash 1.2s linear infinite;
+  }
+
+  @keyframes drop {
+    0%{
+     transform: translateY(0vh);  
+    }
+    75%{
+      transform: translateY(100vh);  
+    }
+    100%{
+       transform: translateY(100vh); 
+    }
+  }
+
+  @keyframes stem {
+    0%{
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+  @keyframes splash {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(0);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+  }
+
+  
+  .imageonoff img {
+    position: absolute;
+    bottom: 3%;
+    right: 87%;
+    width: 150px;
+    height: 150px;
+    
+
+  }
+  
+  .posters{
+    position: absolute;
+    top: 55%;
+    left:35%;
+    transform: translate(0, -50%);    
+  }
+
+  .video{
+    position: absolute;
+    top: 55%;
+    left: 19%;
+    transform: translate(0, -50%);
+  }
+
+  /*carousel css*/
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+  }
+  li[data-active] .slide {
+    opacity: 1;
+  }
+  .carousel>ul {
+    margin: 0;    
+    padding: 0;
+  }
+  .slide > img {
+    display:block;
+    width: 850px;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    margin:auto;
+  }
+  
+  .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+  }
+  
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+  }
+  
+  .carousel-button:focus {
+    outline: 1px solid black;
+  }
+  
+  .carousel-button.prev {
+    left: 1rem;  
+  }
+  
+  .carousel-button.next {
+    right: 1rem;
+  }

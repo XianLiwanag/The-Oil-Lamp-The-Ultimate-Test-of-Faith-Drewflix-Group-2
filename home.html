@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The Oil Lamp</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <audio id="myAudio" style="display: none" controls autoplay>       
+        <source src="./rain.mp3" type="audio/mp3">        
+      </audio><br>
+    <div id="rain-container" class="rain-container">
+    </div>
+    <div class="banner">
+        <div class="navbar">
+            <a href="group2.html"><img src=" logo.png"class="logo"></a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">Morals</a></li>
+                <li><a href="poster.html">Poster</a></li>
+                <li><a href="teaser.html">Teaser</a></li>
+                <li><a href="video.html">Video</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>THE OIL LAMP</h1>
+            <p>The Ultimate Test of Faith</p>
+            <div>
+                <button type="button"><span></span><ul><li><a href="video.html">WATCH HERE</a></li></ul></button>
+                <button type="button"><span></span><ul><li><a href="https://youtu.be/erLl2KceOKI">ON YOUTUBE</a></li></ul></button>
+            </div>        
+        </div>
+    <div id="imageon" class="imageonoff" style="display: none; padding-right: 90%;"> 
+        <img src="ON LAMP.png" onclick="disableMute()"> 
+    </div>
+    <div id="imageoff" class="imageonoff" style="display: block; padding-right: 90%;">
+        <img src="OFF LAMP.png" onclick="enableMute()">
+    </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
